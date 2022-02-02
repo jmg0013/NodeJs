@@ -26,7 +26,7 @@ app.use(express.json());
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "10.192.240.18",
+  host: "10.192.240.14",
   port: 3307,
   database: "php_grupal",
   user: "Desarrollador",
