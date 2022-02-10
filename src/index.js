@@ -6,6 +6,13 @@ const vehi = require('./vehiculos/vehiculos');
 const serv = require('./servicios/servicios');
 const bodyParser = require('body-parser');
 const cors = require('../node_modules/cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger_output.json');
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
+// require('index.js')(app);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
@@ -26,7 +33,7 @@ app.use(express.json());
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "10.192.240.14",
+  host: "10.192.240.18",
   port: 3307,
   database: "php_grupal",
   user: "Desarrollador",

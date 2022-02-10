@@ -1,0 +1,372 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/usuario": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_usuario",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/vehiculo_por_id_usuario": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_usuario",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/vehiculo_por_id_vehiculo": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_vehiculo",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/servicio_por_id_vehiculo": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_vehiculo",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/servicio_por_id_servicio": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_servicio",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/editUsuario": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_usuario",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/crearUsuario": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_usuario",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "apell",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "dni",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "pass",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "tipo",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/eliminarUsuario": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/editVehiculo": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "marca",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "id_vehiculo",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/crearVehiculo": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_vehi",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "matri",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "marca",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "modelo",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "id_usu",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/eliminarVehiculo": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_vehi",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/editServicio": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_servicio",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "descripcion",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/crearServicio": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_servicio",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "fecha",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "id_vehiculo",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "descripcion",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/eliminarServicio": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_servicio",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/UsuVehi": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_usuario",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VehiServ": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_usuario",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
