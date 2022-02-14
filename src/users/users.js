@@ -37,14 +37,13 @@ function editUsu(req,res,con) {
 }
 
 function createUsu(req,res,con) {
-    let id_usuario = req.query.id_usuario
   let nombre = req.query.nombre
   let apell = req.query.apell
   let dni = req.query.dni
   let pass = req.query.pass
   let tipo_user = req.query.tipo
 
-  let sql = "INSERT INTO usuario VALUES('"+id_usuario+"', '"+nombre+"', '"+apell+"', '"+dni+"', '"+pass+"', '"+tipo_user+"');";
+  let sql = "INSERT INTO usuario VALUES('"+nombre+"', '"+apell+"', '"+dni+"', '"+pass+"', '"+tipo_user+"');";
   con.query(sql, function(err, result){
     if(err) throw err;
     

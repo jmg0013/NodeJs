@@ -1,5 +1,16 @@
 const { editUsu } = require("../users/users");
 
+function getVehiList(req,res,con) {
+  let sql = "SELECT * from vehiculo";//aqui podemos utilizar una variable o escribirlo en la consulta
+  con.query(sql, function (err, result) {
+  if (err) throw err;
+
+  res.json(result);//aqui devuelve
+
+  console.log("Result: " + JSON.stringify(result,null,2));
+  });
+}
+
 function getVehiIdUsu(req,res,con) {
     const id_usuario = req.query.id_usuario;
     
@@ -83,6 +94,7 @@ function VehiServList(req,res,con) {
   });
 }
 
+exports.getVehiList = getVehiList;
 exports.getVehiIdUsu = getVehiIdUsu;
 exports.getVehiIdVehi = getVehiIdVehi;
 exports.editVehi = editVehi;

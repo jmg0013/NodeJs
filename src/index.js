@@ -6,10 +6,10 @@ const vehi = require('./vehiculos/vehiculos');
 const serv = require('./servicios/servicios');
 const bodyParser = require('body-parser');
 const cors = require('../node_modules/cors');
-const swaggerUi = require('swagger-ui-express');
-const swaggerFile = require('./swagger_output.json');
+// const swaggerUi = require('swagger-ui-express');
+// const swaggerFile = require('./swagger_output.json');
 
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+// app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // require('index.js')(app);
 
@@ -33,7 +33,7 @@ app.use(express.json());
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "10.192.240.18",
+  host: "10.192.240.14",
   port: 3307,
   database: "php_grupal",
   user: "Desarrollador",
@@ -45,8 +45,10 @@ con.connect(function(err) {
   console.log("Connected!");//mensaje para asegurar que conectamos con la base de datos
 });
 
-//1 Lista de usuarios
+//1 Lista de tablas
 app.get('/', (req, res) => users.getUsersList(req,res,con));//req es lo que recibe
+app.get('/vehiculos', (req, res) => vehi.getVehiList(req,res,con));
+app.get('/servicios', (req, res) => serv.getServList(req,res,con));
 
 //2 Información de un usuario, filtrando por su ID
 app.get('/usuario', (req, res) => users.getUsersId(req,res,con));
